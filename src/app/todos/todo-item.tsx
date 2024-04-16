@@ -7,7 +7,7 @@ type Props = {
   params: { id: number; name: string };
 };
 
-export default function Item({ params }: Props) {
+export default function TodoItem({ params }: Props) {
   const pathName = usePathname();
 
   return (
