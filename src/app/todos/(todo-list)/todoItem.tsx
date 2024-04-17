@@ -7,6 +7,7 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
+  Checkbox,
 } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -67,11 +68,10 @@ export default function TodoItem({ params }: Props) {
         </CardBody>
 
         <CardFooter className="flex justify-between">
-          <div className="flex gap-1">
-            <p className="font-semibold text-default-400 text-small">4</p>
-            <p className=" text-default-400 text-small">Following</p>
-          </div>
-          <Priority priority={params.priority}/>
+          <Checkbox radius="full" color="success" size="sm">
+            Done
+          </Checkbox>
+          <Priority priority={params.priority} />
         </CardFooter>
       </Card>
     </>
