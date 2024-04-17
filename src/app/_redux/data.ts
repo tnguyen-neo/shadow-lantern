@@ -1,7 +1,7 @@
 export enum TodoPriority {
-  HIGH = "High",
-  MEDIUM = "Medium",
-  LOW = "Low",
+  HIGH = "high",
+  MEDIUM = "medium",
+  LOW = "low",
 }
 
 export type Todo = {
@@ -10,7 +10,7 @@ export type Todo = {
   priority: TodoPriority;
 };
 
-export const Data: Todo[] = [
+export const Todos: Todo[] = [
   { id: 1, label: "A", priority: TodoPriority.HIGH },
   { id: 2, label: "B", priority: TodoPriority.LOW },
   { id: 3, label: "C", priority: TodoPriority.MEDIUM },

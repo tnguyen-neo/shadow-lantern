@@ -31,13 +31,13 @@ export default function TodoItem({ params }: Props) {
           >
             {params.label}
           </Link>
-          <span className="flex gap-2">
+          <span className="flex">
             <Button
               isIconOnly
               color="default"
               radius="sm"
               size="sm"
-              variant="bordered"
+              variant="light"
               onPress={() => {}}
             >
               <Edit size={16} />
@@ -47,7 +47,7 @@ export default function TodoItem({ params }: Props) {
               color="danger"
               radius="sm"
               size="sm"
-              variant="bordered"
+              variant="light"
               onPress={() => {}}
             >
               <Trash2 size={16} />
