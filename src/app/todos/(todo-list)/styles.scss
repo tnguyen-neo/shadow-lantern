@@ -1,0 +1,15 @@
+.priority {
+  @apply px-2 py-1 rounded-md text-sm text-white;
+
+  &-High {
+    @apply bg-red-400;
+  }
+
+  &-Medium {
+    @apply bg-orange-400/90;
+  }
+
+  &-Low {
+    @apply bg-gray-400;
+  }
+}

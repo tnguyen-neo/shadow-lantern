@@ -1,5 +1,6 @@
 "use client";
 
+import { Todo } from "@/app/_redux/data";
 import {
   Button,
   Card,
@@ -10,9 +11,10 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Edit, Trash2 } from "react-feather";
+import Priority from "./priority";
 
 type Props = {
-  params: { id: number; name: string };
+  params: Todo;
 };
 
 export default function TodoItem({ params }: Props) {
@@ -20,13 +22,13 @@ export default function TodoItem({ params }: Props) {
 
   return (
     <>
-      <Card className="max-w-[340px]">
+      <Card className="max-w-80">
         <CardHeader className="justify-between">
           <Link
             href={`${pathName}/${params.id}`}
             className="flex items-center text-small font-semibold leading-none text-default-600"
           >
-            {params.name}
+            {params.label}
           </Link>
           <span className="flex gap-2">
             <Button
@@ -50,6 +52,7 @@ export default function TodoItem({ params }: Props) {
             </Button>
           </span>
         </CardHeader>
+
         <CardBody className="px-3 py-0 text-small text-default-400">
           <p>
             Frontend developer and UI/UX enthusiast. Join me on this coding
@@ -62,15 +65,13 @@ export default function TodoItem({ params }: Props) {
             </span>
           </span>
         </CardBody>
-        <CardFooter className="gap-3">
+
+        <CardFooter className="flex justify-between">
           <div className="flex gap-1">
             <p className="font-semibold text-default-400 text-small">4</p>
             <p className=" text-default-400 text-small">Following</p>
           </div>
-          <div className="flex gap-1">
-            <p className="font-semibold text-default-400 text-small">97.1K</p>
-            <p className="text-default-400 text-small">Followers</p>
-          </div>
+          <Priority priority={params.priority}/>
         </CardFooter>
       </Card>
     </>

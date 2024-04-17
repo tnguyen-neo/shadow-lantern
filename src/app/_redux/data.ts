@@ -1,6 +1,18 @@
-export const Data = [
-  {id: 1, name: 'A'},
-  {id: 2, name: 'B'},
-  {id: 3, name: 'C'},
-  {id: 4, name: 'D'},
-]
+export enum TodoPriority {
+  HIGH = "High",
+  MEDIUM = "Medium",
+  LOW = "Low",
+}
+
+export type Todo = {
+  id: number | string;
+  label: string;
+  priority: TodoPriority;
+};
+
+export const Data: Todo[] = [
+  { id: 1, label: "A", priority: TodoPriority.HIGH },
+  { id: 2, label: "B", priority: TodoPriority.LOW },
+  { id: 3, label: "C", priority: TodoPriority.MEDIUM },
+  { id: 4, label: "D", priority: TodoPriority.MEDIUM },
+];

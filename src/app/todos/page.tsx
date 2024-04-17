@@ -1,5 +1,5 @@
 import { Data } from "../_redux/data";
-import TodoItem from "./todo-item";
+import TodoList from "./(todo-list)/todoList";
 
 export const metadata = {
   title: "To do list",
@@ -9,12 +9,8 @@ export default function Todos() {
   const data = Data;
   return (
     <>
-      <p>To do list</p>
-      <div className="flex gap-4">
-        {data.map((item) => (
-          <TodoItem key={item.id} params={item} />
-        ))}
-      </div>
+      <h1>To do list</h1>
+      <TodoList />
     </>
   );
 }
