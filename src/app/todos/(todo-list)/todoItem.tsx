@@ -44,9 +44,10 @@ export default function TodoItem({ params }: Props) {
             </Button>
             <Button
               isIconOnly
-              className="bg-red-500 border-red-500 text-white"
+              color="danger"
               radius="sm"
               size="sm"
+              variant="bordered"
               onPress={() => {}}
             >
               <Trash2 size={16} />
