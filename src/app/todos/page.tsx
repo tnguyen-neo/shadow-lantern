@@ -10,11 +10,11 @@ export default function Todos() {
   return (
     <>
       <p>To do list</p>
-      <p className="flex gap-4">
+      <div className="flex gap-4">
         {data.map((item) => (
           <TodoItem key={item.id} params={item} />
         ))}
-      </p>
+      </div>
     </>
   );
 }

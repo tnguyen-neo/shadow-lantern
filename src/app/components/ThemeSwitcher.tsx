@@ -2,9 +2,8 @@
 
 import { Switch } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
-import SunIcon from "../../../icons/SunIcon";
-import MoonIcon from "../../../icons/MoonIcon";
 import { useTheme } from "next-themes";
+import { Moon, Sun } from "react-feather";
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -25,8 +24,8 @@ export default function ThemeSwitcher() {
       defaultSelected
       size="lg"
       color="default"
-      startContent={<SunIcon />}
-      endContent={<MoonIcon />}
+      startContent={<Sun />}
+      endContent={<Moon />}
       onValueChange={(isSelected: boolean) => switchTheme(isSelected)}
     ></Switch>
   );
